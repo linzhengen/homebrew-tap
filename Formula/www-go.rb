@@ -5,32 +5,32 @@
 class WwwGo < Formula
   desc "Serve simple static file server"
   homepage "https://github.com/linzhengen/www-go"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/linzhengen/www-go/releases/download/v0.1.0/www-go_darwin_amd64"
-      sha256 "60cce877fe15e5d91c8940b839f746bc02d520728daaa7f31264ba52a3be0125"
+      url "https://github.com/linzhengen/www-go/releases/download/v0.1.1/www-go_0.1.1_darwin_amd64.tar.gz"
+      sha256 "8f80f492816163f87ca370aee08b4a5db657f639dec280b393e4e777fb3bcd59"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/linzhengen/www-go/releases/download/v0.1.0/www-go_darwin_arm64"
-      sha256 "744f39822588314fee63faa4285e4a5d6bb7573f1cad5aaefe19fb2f52f3af83"
+      url "https://github.com/linzhengen/www-go/releases/download/v0.1.1/www-go_0.1.1_darwin_arm64.tar.gz"
+      sha256 "fa847698a836f031ff57d3d6d2ed02202949b7a9bd32a76940d27ddd46fcda86"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/linzhengen/www-go/releases/download/v0.1.0/www-go_linux_amd64"
-      sha256 "83a0c117b38915f1f5b7603299c051fef46628cadf7f3ebcf999ae8848e4f871"
+      url "https://github.com/linzhengen/www-go/releases/download/v0.1.1/www-go_0.1.1_linux_amd64.tar.gz"
+      sha256 "1b0e2f725bdaec4be8261b28a2d84028498e2dbbdd2d2d7888d136f6918ea166"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/weaveworks/eksctl/releases/download/v0.67.0/go_linux_arm64"
-      sha256 "6400e05804645b7c4f78a83ec3a394c096cdf8f465c06154e468b165c258abf4"
+      url "https://github.com/linzhengen/www-go/releases/download/v0.1.1/www-go_0.1.1_linux_arm64.tar.gz"
+      sha256 "556acac877cd8c49d9b4d1f45614561790393184272105eddc65a81fa9e78e65"
     end
   end
 
-  head "https://github.com/linzhengen/www-go/releases/download/latest_release/www-go_darwin_amd64"
+  head "https://github.com/linzhengen/www-go/releases/download/v0.1.1/www-go_0.1.1_darwin_amd64.tar.gz"
 
   def install
     bin.install "www-go"
